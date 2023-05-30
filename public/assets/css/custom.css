@@ -1,0 +1,120 @@
+.contact-container.cust-container {
+    padding: 0 10%;
+}
+.paypal-form-outer form input,
+.paypal-form-outer form textarea {
+    font-size: 16px;
+}
+.paypal-form-outer label {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.form-group input,
+textarea {
+    width: 100%;
+    border: 1px solid rgb(204 204 204 / 30%);
+    border-radius: 5px;
+}
+.form-group input {
+    height: 42px;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+}
+input,
+label,
+textarea,
+h2,
+p {
+    font-family: "MyriadPro", Arial, sans-serif;
+}
+
+.paypal-form-outer {
+    padding: 50px;
+    border: 1px solid rgb(204 204 204 / 20%);
+    border-radius: 10px;
+    box-shadow: 1px 0px 13px 4px rgb(204 204 204 / 30%);
+    overflow-y: scroll;
+}
+.paypal-form-outer form textarea , .paypal-form-outer form input {
+    padding-left: 15px;
+} 
+.paypal-form-outer form textarea {
+    padding-top: 13px;
+}
+.form-group.custom-fromdiv input {
+    background: #73d581;
+    color: #fff;
+    font-size: 18px;
+    min-width: 150px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    margin-top: 30px;
+    min-height: 50px;
+}
+footer.paypal-cust-footer {
+    margin-top: 75px;
+}
+.user_loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.user_loader .loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(230 230 230 / 40%);
+    z-index: 9999;
+    height: 100%;
+}
+.user_loader .loader-overlay .loading-gif {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url(../../assets/images/Healwire_Loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px;
+    }
+    .contact-container.cust-container {
+        padding: 0 5%;
+    }
+    .form-group.custom-fromdiv input {
+        min-height: 45px;
+    }
+    footer.paypal-cust-footer {
+        margin-top: 35px;
+    }
+}
+@media (max-width: 480px) {
+    .paypal-form-outer {
+        padding: 30px 20px 40px 15px;
+    }
+    .form-group input,
+textarea {
+    width: 97%;
+  
+}
+}

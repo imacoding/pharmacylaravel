@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "MyriadPro";
+    src: url(../fonts/MyriadPro-Regular.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "MyriadPro";
+    src: url(../fonts/MyriadPro-Semibold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "MyriadPro";
+    src: url(../fonts/MyriadPro-Bold.otf);
+    font-weight: 700;
+}
+
+body{
+    color: $dark;
+    font-family: 'MyriadPro', Arial, sans-serif;
+    &.modal-open{
+        height: 100vh;
+    }
+}
+::selection {
+    background-color: #73D581;
+    color: white;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #73D581;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #51b35f;
+  }
+
+
+
+
+.container{
+    @include min(1500){
+        max-width: 1454px;
+        padding-left: 45px!important;
+        padding-right: 45px!important;
+    }
+    @include min-max(1200,1499.9){
+        max-width: 1170px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.ft300,.fw300{
+    font-weight: 300;
+}
+.ft400,.fw400{
+    font-weight: 400;
+}
+.ft500,.fw500{
+    font-weight: 500;
+}
+.ft600,.fw600{
+    font-weight: 600;
+}
+.ft700,.fw700{
+    font-weight: 700;
+}
+
+
+@function line($fontSize,$lineHeight) {
+    $abc:  $lineHeight /$fontSize * 1em;
+     @return $abc;
+}
+
+.line16-28{
+    line-height: line(16,28);
+}
+.line17-28{
+    line-height: line(17,28);
+}
+.line18-32{
+    line-height: line(18,32);
+}
+.line34-50{
+    line-height: line(34,50);
+}
+
+
+
+
+
+
+$responsive-font-size: 13 14 15 17 18 21 22 24 30 32 34 45;
+
+:root{
+    @each $current-font in $responsive-font-size {
+        --res#{$current-font}: #{$current-font}px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    :root{
+        @each $current-font in $responsive-font-size {
+            --res#{$current-font}: #{$current-font / 16 * 13}px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    :root{
+        @each $current-font in $responsive-font-size {
+            --res#{$current-font}: #{ ( ( $current-font - 13 ) / 16 * 11 ) + 13}px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    :root{
+        @each $current-font in $responsive-font-size {
+            --res#{$current-font}: #{ ( ( $current-font - 13 ) / 16 * 8 ) + 13}px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    :root{
+        @each $current-font in $responsive-font-size {
+            --res#{$current-font}: #{ ( ( $current-font - 13 ) / 16 * 7 ) + 13}px;
+        }
+    }
+}
+
+
+
+@each $current-font in $responsive-font-size {
+    .ft#{$current-font} {
+        font-size: var(--res#{$current-font});
+    }
+}
+
+@mixin hover($color,$time: 0.3s) {
+    transition: all $time ease-in;
+    &:hover{
+        color: $color;
+    }
+}
+@mixin hover-bg($color,$time: 0.3s) {
+    transition: all $time ease-in;
+    &:hover{
+        background-color: $color;
+    }
+}
+
+
+
+.dark-link{
+    color: $dark;
+    @include hover($primary);
+}
+.color-dark-gray{
+    color: #555555;
+}
+
+.pt25,.py25{
+    padding-top: var(--size25);
+}
+.pt40,.py40{
+    padding-top: var(--size40);
+}
+.pt50,.py50{
+    padding-top: var(--size50);
+}
+
+
+.pt60,.py60{
+    padding-top: var(--size60);
+}
+
+
+
+
+.pb20,.py20{
+    padding-bottom: var(--size20);
+}
+.pb40,.py40{
+    padding-bottom: var(--size40);
+}
+.pb50,.py50{
+    padding-bottom: var(--size50);
+}
+.pb60,.py60{
+    padding-bottom: var(--size60);
+}
+
+input{
+    &::placeholder{
+        color: #BEBEBE;
+        // letter-spacing: 0;
+        // filter: opacity(1);
+        // transition: all 0.5s ease-in-out;
+    }
+    &:hover{
+        &::placeholder{
+            // letter-spacing: 3px;
+            // filter: opacity(0);
+        }
+    }
+}
+
+$res-size: 20 25 30 45 50 60;
+
+:root{
+    @each $current-size in $res-size {
+        --size#{$current-size}: #{$current-size}px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    :root{
+        @each $current-size in $res-size {
+            --size#{$current-size}: #{$current-size / 16 * 13}px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    :root{
+        @each $current-size in $res-size {
+            --size#{$current-size}: #{$current-size / 16 * 11}px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    :root{
+        @each $current-size in $res-size {
+            --size#{$current-size}: #{$current-size / 16 * 8}px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    :root{
+        @each $current-size in $res-size {
+            --size#{$current-size}: #{$current-size / 16 * 7}px;
+        }
+    }
+}
+.color-gray{
+    color: #8C8C8C;
+}

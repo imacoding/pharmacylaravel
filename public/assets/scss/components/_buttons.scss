@@ -1,0 +1,138 @@
+
+.btn-grp {
+	.btn {
+		margin: 0 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.btn {
+	
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+	&:hover {
+		
+	}	
+	&.primary {
+		background:$primary-color;
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+	}
+	&.brdr {
+		border:1px solid $primary-color;
+	}
+	&.btn-hp {
+		&:hover {
+			background:#29293B;
+			color: $white;
+			
+		}
+	}
+	&.btn-primary {
+		background:$primary-color;
+		font-weight: 700;
+		border:2px solid $primary-color;
+		&:hover {
+			background:none;
+			color: #000;
+		}
+	}
+	&.btn-md {
+		min-height: 45px;
+		font-size: 1.4rem;
+		
+		// @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+		// 	padding-top: 14px!important;
+		// }
+
+	} 
+	&.btn-sm {
+		min-height: 40px;
+		font-size: 1.4rem;
+		// @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+		// 	padding-top: 6px!important;
+		// }
+	} 
+	&.btn-lg {
+		min-height: 57px;
+		font-size: 1.6rem;
+		padding: 0 52px;
+		@include max(767) {
+			min-height: 50px;
+			
+		}
+		// @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+		// 	padding-top: 20px;
+		// }
+		// @include max(1450) {
+		// 	min-height: 60px;
+		// 	font-size: 1.5rem;
+		// }
+		// @include max(1199) {
+		// 	min-height: 50px;
+		// 	font-size: 1.3rem;
+		// }
+		// @include max(767) {
+		// 	min-height: 40px;
+		// 	font-size: 1.1rem;
+		// }
+	}
+	&.btn-icon  {
+		position: relative;
+		padding-left: 50px;
+		
+		img,svg {
+			position: absolute;
+			width: 22px;
+			height: 22px;
+			left: 15px;
+			fill: $white;
+			@include transition(all,ease-in-out,0.3s);
+		}
+		&:hover{
+		
+			svg{
+				fill: $primary-color !important;
+			}
+		}
+	}
+
+	&.plus-icon {
+		position: relative;
+		border: none;
+		&:hover {
+			background: darken($primary-color,10%);
+			
+			
+		}
+	}
+
+	&.styled {
+		border: 1px solid $primary-color;
+		background:transparent;
+		color: $primary-color;
+		font-size: 1.4rem;
+		padding: 0 25px;
+		&:hover{
+			background-color: $primary-color;
+			color: #fff;
+			opacity: 1;
+		}
+	
+	}
+
+	&.full-width {
+		width: 100%;
+		text-align: center;
+	}
+	
+}
+
+
+
+

@@ -1,0 +1,26 @@
+$primary: #34B546;
+$secondary: #55CFD4;
+$dark: #37393E;
+// bootstrap
+@import 'bootstrap/bootstrap';
+// Helpers
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/comman-styles';
+// Base
+@import 'base/reset';
+@import 'base/headings';
+// Components
+// @import 'components/font-kit';
+@import 'components/icomoon';
+// @import 'components/buttons';
+@import 'components/navigation';
+// @import 'components/plugins';
+// Pages
+@import 'pages/style-guide';
+@import 'pages/header';
+@import 'pages/home';
+@import 'pages/login-signup';
+@import 'pages/dashboard';
+@import 'pages/inner-pages';
+@import 'pages/footer';

@@ -1,0 +1,326 @@
+{
+  "name": "deafult-icons",
+  "css_prefix_text": "ico-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 61594,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 61593,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e9107949dd6c9e8ab2b29ae07156e38c",
+      "css": "linkedin",
+      "code": 61665,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 61805,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "47a1f80457068fbeab69fdb83d7d0817",
+      "css": "youtube-play",
+      "code": 61802,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "57a4f84c40a0c44d47387105f162a427",
+      "css": "youtube",
+      "code": 59392,
+      "src": "zocial"
+    },
+    {
+      "uid": "921e3974e54ff9e8b7cd906a3dc74636",
+      "css": "direction",
+      "code": 61732,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f11c9e95ae5eaa84d193e8fa1d38c6f9",
+      "css": "down-open-mini",
+      "code": 59393,
+      "src": "entypo"
+    },
+    {
+      "uid": "592717bd601645d61517d2a584d04127",
+      "css": "left-open-mini",
+      "code": 59394,
+      "src": "entypo"
+    },
+    {
+      "uid": "884cfc3e6e2d456dd2a2ca0dbb9e6337",
+      "css": "left-open-big",
+      "code": 59395,
+      "src": "entypo"
+    },
+    {
+      "uid": "004882ab2d5c418c5b2060e80596279b",
+      "css": "right-open-big",
+      "code": 59396,
+      "src": "entypo"
+    },
+    {
+      "uid": "c21d309f797d3644dc8d28c4617738ce",
+      "css": "left",
+      "code": 59397,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "1d35198f5190ec004dd4ec742fbe19ca",
+      "css": "right",
+      "code": 59398,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d02a803276d9e1f42b7393964aa22ce9",
+      "css": "heart",
+      "code": 59401,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "5e2ab018e3044337bcef5f7e94098ea1",
+      "css": "thumbs-up-alt",
+      "code": 61796,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5774d0a0e50f6eefc8be01bd761e5dd3",
+      "css": "circle-thin",
+      "code": 61915,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "130380e481a7defc690dfb24123a1f0c",
+      "css": "circle",
+      "code": 61713,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "dcedf50ab1ede3283d7a6c70e2fe32f3",
+      "css": "chat",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel-1",
+      "code": 59405,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "44eb9d69bf3b9b74629ce6852a2f9681",
+      "css": "cancel-circled",
+      "code": 61550,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
+      "css": "phone",
+      "code": 59406,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a17986e457f3d85f26c9c240dfd6a4ba",
+      "css": "mail",
+      "code": 59407,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "291e2e127efe7a6bc580af6d3ead3771",
+      "css": "location",
+      "code": 61489,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "474656633f79ea2f1dad59ff63f6bf07",
+      "css": "star",
+      "code": 59408,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d17030afaecc1e1c22349b99f3c4992a",
+      "css": "star-empty",
+      "code": 59409,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bbd66ef66bb8fa9edde54d9a90b89150",
+      "css": "user",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "8a6c569e59c69e9de113978b11c057b8",
+      "css": "play-circle2",
+      "code": 59411,
+      "src": "iconic"
+    },
+    {
+      "uid": "70370693ada58ef0a60fa0984fe8d52a",
+      "css": "plus",
+      "code": 59412,
+      "src": "entypo"
+    },
+    {
+      "uid": "1256e3054823e304d7e452a589cf8bb8",
+      "css": "minus",
+      "code": 59413,
+      "src": "entypo"
+    },
+    {
+      "uid": "jh3jpcb1t1bcm80gidkadilh080aq79h",
+      "css": "menu",
+      "code": 59414,
+      "src": "typicons"
+    },
+    {
+      "uid": "a35f42d0df208e71e54d743ef800d9d4",
+      "css": "heart",
+      "code": 59410,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M543.5 1000L467.4 923.9C184.8 673.9 0 505.4 0 298.9A294.7 294.7 0 0 1 298.9 0 326.6 326.6 0 0 1 543.5 114.1 326.6 326.6 0 0 1 788 0 294.7 294.7 0 0 1 1087 298.9C1087 505.4 902.2 673.7 619.6 923.9Z",
+        "width": 1087
+      },
+      "search": [
+        "favorite-heart-button-(1)"
+      ]
+    },
+    {
+      "uid": "67dacc229439ff98468c2338fbd932d0",
+      "css": "view",
+      "code": 59411,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M891.1 1000C400.9 1000 0 622.5 0 500 0 441 91.5 316.4 261 202.1A1154.3 1154.3 0 0 1 891.1 0 1143.3 1143.3 0 0 1 1521.3 209.1C1684.5 322 1782.3 445.6 1782.3 500 1782.3 622.5 1381.3 1000 891.1 1000ZM860 223.2A283.5 283.5 0 0 0 573.3 503 286.8 286.8 0 0 0 1146.8 503 283.5 283.5 0 0 0 860.2 223.1Z",
+        "width": 1782
+      },
+      "search": [
+        "group-14"
+      ]
+    },
+    {
+      "uid": "e3d4920a1e323f292dac0bfdeb37084d",
+      "css": "chat",
+      "code": 59412,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M1302.8 1000H347.4A356.2 356.2 0 0 1 0 636.4V363.6A356.2 356.2 0 0 1 347.4 0H955.4A356.2 356.2 0 0 1 1302.8 363.6V1000ZM947.3 423.6A79 79 0 1 0 1026.2 502.6 79.1 79.1 0 0 0 947.3 423.6ZM670.8 423.6A79 79 0 1 0 749.8 502.6 79.1 79.1 0 0 0 670.8 423.6ZM394.4 423.6A79 79 0 1 0 473.2 502.6 79.1 79.1 0 0 0 394.4 423.6Z",
+        "width": 1303
+      },
+      "search": [
+        "group-15"
+      ]
+    },
+    {
+      "uid": "fe9bf05ffa0c6a6ff110a900be53f8f1",
+      "css": "search-ico",
+      "code": 59397,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M258 691.6L220.3 738.8 56.7 943.3",
+        "width": 902
+      },
+      "search": [
+        "search-ico"
+      ]
+    },
+    {
+      "uid": "1fcc5c3ab536ef8b8e5965c701aee3f2",
+      "css": "group-166",
+      "code": 59413,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "",
+        "width": 182
+      },
+      "search": [
+        "group-166"
+      ]
+    },
+    {
+      "uid": "04e5faf8ac10730b414e3a04f0fb77fa",
+      "css": "group-166",
+      "code": 59398,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "",
+        "width": 182
+      },
+      "search": [
+        "group-166"
+      ]
+    },
+    {
+      "uid": "0cac062f724eb4c7af35a8e23df526c3",
+      "css": "search-1",
+      "code": 59413,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M1076.4 1028.9L711.6 664C771.2 593.7 807.3 502.9 807.3 403.7 807.3 181.1 626.3 0 403.7 0S0 181.1 0 403.7 181.1 807.3 403.7 807.3C502.9 807.3 593.7 771.2 664 711.6L1028.9 1076.4S1076.4 1028.9 1076.4 1028.9ZM403.7 740C218.2 740 67.3 589.1 67.3 403.7S218.2 67.3 403.7 67.3 740 218.2 740 403.7 589.1 740 403.7 740Z",
+        "width": 1000
+      },
+      "search": [
+        "search"
+      ]
+    },
+    {
+      "uid": "002888e5ecc5b993e3efb55100d8e023",
+      "css": "126474",
+      "code": 59414,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M991.2 949L748.2 706C813.4 631 852.9 533.3 852.9 426.4 852.9 191.1 661.5 0 426.5 0 191.2 0 0.1 191.4 0.1 426.4S191.5 852.8 426.5 852.8C533.4 852.8 631.2 813.3 706.1 748.1L949.1 991.1C954.9 996.9 962.6 1000 970.2 1000S985.5 997.1 991.2 991.1C1002.8 979.6 1002.8 960.5 991.2 949ZM59.8 426.4C59.8 224.2 224.3 59.9 426.3 59.9 628.5 59.9 792.8 224.4 792.8 426.4S628.5 793.1 426.3 793.1C224.3 793.1 59.8 628.6 59.8 426.4Z",
+        "width": 1000
+      },
+      "search": [
+        "126474"
+      ]
+    }
+  ]
+}

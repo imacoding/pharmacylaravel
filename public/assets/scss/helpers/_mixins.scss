@@ -1,0 +1,484 @@
+@mixin px-rem($pxValue, $property: "font-size", $standard-size: 16) {
+  #{$property}: $pxValue/$standard-size + rem;
+}
+$base-size: 16;
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+@mixin flx($position) {
+  @if $position== "both" {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+  } @else if $position== "top" {
+    @include align-items(flex-start);
+  } @else if $position== "bottom" {
+    @include align-items(flex-end);
+  } @else if $position== "vcenter" {
+    @include align-items(center);
+  } @else if $position== "right" {
+    @include justify-content(flex-end);
+  } @else if $position== "left" {
+    @include justify-content(flex-start);
+  } @else if $position== "hcenter" {
+    @include justify-content(center);
+  } @else if $position== "eqaul-space" {
+    @include justify-content(space-between);
+  }
+}
+
+// Flexbox display
+@mixin flexbox() {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -ms-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-basis: $width;
+  flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}
+
+@mixin flex($position) {
+  @if $position== "both" {
+    @include justify-content(center);
+    @include align-items(center);
+  } @else if $position== "top" {
+    @include align-items(flex-start);
+  } @else if $position== "bottom" {
+    @include align-items(flex-end);
+  } @else if $position== "vcenter" {
+    @include align-items(center);
+  } @else if $position== "right" {
+    @include justify-content(flex-end);
+  } @else if $position== "left" {
+    @include justify-content(flex-start);
+  } @else if $position== "hcenter" {
+    @include justify-content(center);
+  } @else if $position== "eqaul-space" {
+    @include justify-content(space-between);
+  }
+}
+
+//   Media query
+@mixin min-max($resMin, $resMax) {
+  @media (min-width: $resMin+px) and (max-width: $resMax+px) {
+    @content;
+  }
+}
+@mixin max($res) {
+  @media (max-width: $res+px) {
+    @content;
+  }
+}
+@mixin min($res) {
+  @media (min-width: $res+px) {
+    @content;
+  }
+}
+// Clearfix
+@mixin clearfix {
+  *zoom: 1;
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin font-light {
+  font-weight: $font-light;
+}
+
+@mixin font-regular {
+  font-weight: $font-regular;
+}
+
+@mixin font-semibold {
+  font-weight: $font-semibold;
+}
+
+@mixin font-medium {
+  font-weight: $font-medium;
+}
+
+@mixin font-bold {
+  font-weight: $font-bold;
+}
+
+// Image Effects
+@mixin grayscale($number) {
+  filter: grayscale($number);
+  -moz-filter: grayscale($number);
+  -ms-filter: grayscale($number);
+  -o-filter: grayscale($number);
+  -webkit-filter: grayscale($number);
+}
+
+@mixin sepia($number) {
+  filter: sepia($number);
+  -moz-filter: sepia($number);
+  -ms-filter: sepia($number);
+  -webkit-filter: sepia($number);
+}
+
+@mixin saturate($number) {
+  filter: saturate($number);
+  -moz-filter: saturate($number);
+  -ms-filter: saturate($number);
+  -webkit-filter: saturate($number);
+}
+
+@mixin hue-rotate($deg) {
+  filter: hue-rotate($deg);
+  -moz-filter: hue-rotate($deg);
+  -ms-filter: hue-rotate($deg);
+  -webkit-filter: hue-rotate($deg);
+}
+
+@mixin invert($decimal) {
+  filter: invert($decimal);
+  -moz-filter: invert($decimal);
+  -ms-filter: invert($decimal);
+  -webkit-filter: invert($decimal);
+}
+
+@mixin brightness($number) {
+  filter: brightness($number);
+  -moz-filter: brightness($number);
+  -ms-filter: brightness($number);
+  -webkit-filter: brightness($number);
+}
+
+@mixin contrast($number) {
+  filter: contrast($number);
+  -moz-filter: contrast($number);
+  -ms-filter: contrast($number);
+  -webkit-filter: contrast($number);
+}
+
+@mixin blur($pixel) {
+  filter: blur($pixel);
+  -moz-filter: blur($pixel);
+  -ms-filter: blur($pixel);
+  -webkit-filter: blur($pixel);
+}
+
+// Box Shadow
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+  -webkit-box-shadow: $x $y $blur $color;
+}
+
+// Transition Effect
+@mixin transition($property, $function, $time) {
+  transition: $property $function $time;
+  -o-transition: $property $function $time;
+  -webkit-transition: $property $function $time;
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin transition-all($property, $function, $time) {
+  transition: $property $function $time;
+  -o-transition: $property $function $time;
+  -webkit-transition: $property $function $time;
+}
+
+// Transform Object
+@mixin transform($x, $y) {
+  transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+}
+
+@mixin transformY($y) {
+  transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+  -webkit-transform: translateY($y);
+}
+
+@mixin transformX($x) {
+  transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+  -webkit-transform: translateX($x);
+}
+
+@mixin rotate($degree) {
+  transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+}
+
+@mixin scale($x, $y) {
+  transform: scale($x, $y);
+  -ms-transform: scale($x, $y);
+  -o-transform: scale($x, $y);
+  -webkit-transform: scale($x, $y);
+}
+
+// Triangle
+@mixin triangle($size, $color, $direction) {
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) ==2, nth($color, 2), transparent);
+  height: 0;
+  width: 0;
+
+  @if ($direction==up) or
+    ($direction==down) or
+    ($direction==right) or
+    ($direction==left)
+  {
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction==up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+    } @else if $direction==right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    } @else if $direction==down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+    } @else if $direction==left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  } @else if ($direction==up-right) or ($direction==up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction==up-right {
+      border-left: $width solid $background-color;
+    } @else if $direction==up-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction==down-right) or ($direction==down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction==down-right {
+      border-left: $width solid $background-color;
+    } @else if $direction==down-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction==inset-up) {
+    border-color: $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction==inset-down) {
+    border-color: $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction==inset-right) {
+    border-color: $background-color
+      $background-color
+      $background-color
+      $foreground-color;
+    border-style: solid;
+    border-width: $width $height;
+  } @else if ($direction==inset-left) {
+    border-color: $background-color
+      $foreground-color
+      $background-color
+      $background-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+}
+
+// Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin gradient-vertical(
+  $start-color: #555,
+  $end-color: #333,
+  $start-percent: 0%,
+  $end-percent: 100%
+) {
+  background-image: -webkit-linear-gradient(
+    top,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(
+    top,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Opera 12
+  background-image: linear-gradient(
+    to bottom,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+@mixin vertical-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin dashboard-bttn {
+  background-color: #73d581;
+  border:1px solid #73d581;
+  color: #fff;
+  font-size: font(18);
+  @include font-semibold();
+}

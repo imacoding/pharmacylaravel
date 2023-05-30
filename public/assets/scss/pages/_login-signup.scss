@@ -1,0 +1,317 @@
+.login-signin-popup {
+    .modal-title-wrap {
+        text-align: center;
+    }
+    .modal-body {
+        padding: 40px 50px 50px 50px;
+        @include max(767.98) {
+            padding: 30px 20px 30px 20px;
+        }
+    }
+    input,
+    button {
+        border-radius: 8px;
+    }
+    input {
+        border-color: #dbdbdb;
+        padding: 15px;
+        @include max(480.98) {
+            padding: 10px 12px 10px 13px;
+        }
+        &::placeholder {
+            color: #b2b2b2;
+        }
+    }
+    button:not(.btn-link) {
+        padding: 17px;
+        @include max(767.98) {
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+    .form-group {
+        label {
+            margin-bottom: 1px;
+        }
+    }
+    .forgot {
+        font-size: 15px;
+    }
+    button {
+        &:hover {
+            u {
+                color: #59c969;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+}
+
+.password-show-hide {
+    font-family: "icomoon" !important;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    &.p-show {
+        color: $dark;
+        &:before {
+            content: "\e916";
+            font-size: 13.5px;
+        }
+    }
+    &.p-hide {
+        color: #b6b6b6;
+        &:before {
+            content: "\e910";
+        }
+    }
+}
+.pswd-shw-hide-wrap {
+    input {
+        border-right: none !important;
+    }
+    .input-group-append {
+        border: 1px solid #dbdbdb;
+        border-radius: 0 8px 8px 0;
+    }
+}
+
+button.btn-link {
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
+}
+.dark-link {
+    color: $dark;
+    @include hover($primary);
+}
+.pat-15 {
+    padding-top: 15px;
+}
+
+.pab-20 {
+    padding-bottom: 20px;
+}
+.pab-40 {
+    padding-bottom: 40px;
+}
+
+@include max(575.9) {
+    #upload-prescription-modal {
+        overflow: hidden;
+    }
+    #upload-prescription-modal,
+    .login-signin-popup {
+        padding: 0px;
+        .modal-dialog {
+            margin: 0;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .modal-content {
+            border-radius: 0px;
+        }
+    }
+}
+
+#login-error-modal {
+    input[type="password"] {
+        border-color: #ff4747;
+    }
+    .pswd-shw-hide-wrap {
+        .input-group-append {
+            border: 1px solid #ff4747;
+            border-left: 0;
+        }
+    }
+    .inv-pwd {
+        @include max(436) {
+            flex-direction: column;
+            align-items: center;
+            .invalid-pwd {
+                p {
+                    justify-content: center;
+                }
+            }
+            .forgot {
+                position: absolute;
+                left: 50%;
+                bottom: 50%;
+                transform: translateX(-60px);
+            }
+        }
+        .forgot {
+            font-size: 15px !important;
+        }
+        .invalid-pwd {
+            padding-left: 1px;
+            padding-right: 1px;
+            display: flex;
+            p {
+                color: #ff4747;
+                display: flex;
+                align-self: center;
+                padding-left: 5%;
+                padding-top: 7px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+#signup-modal {
+    @include min(576) {
+        .modal-dialog {
+            max-width: 926px;
+        }
+    }
+    .mob-num {
+        .input-group-append {
+            border: 1px solid #dbdbdb;
+            border-radius: 0 8px 8px 0;
+        }
+    }
+    textarea {
+        height: 153px;
+        &::placeholder {
+            color: #b2b2b2;
+        }
+    }
+    .col-md-6:last-child {
+        .form-group:last-of-type {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            color: #56d3d8;
+            &:hover {
+                color: #59c969;
+            }
+        }
+    }
+    .btn-white {
+        border: 1px solid #dbdbdb;
+        background-color: white;
+        color: #37393e;
+    }
+    select {
+        background: url("../images/dropdown.svg");
+        background-repeat: no-repeat;
+        background-position: 95%;
+        @include max(767.9) {
+            margin-bottom: 16px !important;
+        }
+        .mp-sb-16 {
+            font-family: "MyriadPro", Arial, sans-serif !important;
+            font-size: 16px !important;
+            font-family: 500 !important;
+        }
+        &.ht-56 {
+            height: 56px !important;
+            font-family: "MyriadPro", Arial, sans-serif !important;
+            font-size: 16px !important;
+            font-family: 500 !important;
+        }
+    }
+}
+#otp-modal,
+#invalid-otp-modal {
+    .resend {
+        color: #56d3d8 !important;
+    }
+    .time {
+        color: #002539;
+        text-align: center;
+        font-size: 15px;
+    }
+    .otp-field {
+        justify-content: space-around;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        @include max(375) {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        input {
+            width: 50px;
+            height: 60px;
+            color: #37393e;
+            &:focus {
+                outline: none;
+                border: 1px solid #59c969;
+            }
+            @include max(375) {
+                width: 40px;
+                height: 50px;
+            }
+            border-radius: 4px;
+            border: 1px solid #dbdbdb;
+        }
+    }
+}
+#invalid-otp-modal {
+    input {
+        border-color: #ff2121 !important;
+    }
+    .form-group p {
+        color: #ff2121;
+        font-size: 14px;
+    }
+    .fail-otp-msg {
+        text-align: center;
+    }
+}
+label {
+    font-size: 16px;
+}
+.form-control {
+    font-size: 16px;
+}
+.mar-b-30 {
+    margin-bottom: 30px;
+}
+
+.modal {
+    .modal-content {
+        background-color: transparent;
+        border: none;
+        .modal-header {
+            border-bottom: none;
+            button {
+                padding-right: 0;
+                opacity: 1;
+                &:hover {
+                    opacity: 0.8;
+                }
+                &:focus {
+                    outline: none;
+                }
+
+                span {
+                    font-size: 15px;
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .modal-body {
+            background-color: #fff;
+            border-radius: 0.3rem;
+        }
+    }
+}
+#login-modal {
+    .form-group {
+        .input-group {
+            label {
+                position: absolute;
+                bottom: -25px;
+            }
+            .form-control.paswd.error {
+            }
+        }
+    }
+}
